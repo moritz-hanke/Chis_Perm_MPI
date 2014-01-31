@@ -39,9 +39,6 @@ cl <- makeCluster(numWorkers, type = "MPI")
 clusterExport(cl=cl, varlist=c("phaeno.snps", "first.snp",
                                "data.PER", "n.perm", "namen"), envir=environment())
 
-#namen <- names(phaeno.snps)[first.snp:13] # Test für die erstem 5
-
-
 
 # with a for-loop
 chis.PER <-   parLapply(cl=cl, X=namen,
