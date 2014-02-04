@@ -27,7 +27,7 @@ namen <- names(phaeno.snps[,first.snp:(length(phaeno.snps)-900)])
 
 library(parallel)
 
-numWorkers <- 1
+numWorkers <- 2
 
 
 
