@@ -455,7 +455,7 @@ clusterExport(cl=cl, varlist=c("phaeno.snps", "first.snp","namen",
                                "chi_functions"), envir=environment())
 
 
-# with a for-loop und parSapply
+# with replicate und parSapply
 system.time(
   chis.PER <-   parSapply(cl=cl, X=namen,
                           FUN=function(var){
@@ -465,7 +465,7 @@ system.time(
                           ,simplify = TRUE, USE.NAMES = TRUE
   )  # Ende parLapply
 ) 
-
+save(chis.PER, file="/home/hanke/GSEA_SSEA/P_Chi_PERMUTIERT.RData")
 
 ## Shut down cluster
 stopCluster(cl)
